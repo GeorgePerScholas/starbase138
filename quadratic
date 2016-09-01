@@ -1,0 +1,12 @@
+def main():
+	
+	a= int(input("Please enter value"))
+	b= int(input("Please enter value"))
+	c= int(input("Please enter value"))
+	x= int(input("Please enter value"))
+
+	value=(a*(x*x)+(b*x)+c)
+	print (value)
+
+
+main()
