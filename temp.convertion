@@ -1,0 +1,13 @@
+def main():
+	run = 'y'
+	
+	while run == 'y':
+	
+		f= int(input("Please enter value"))
+		value=((f-32)/(9/5))
+		print ("Celsius is", value)
+		print ("Fahrenheit is", f)
+		run = input ("Do you want to enter another value? y or n")
+
+main()
+
