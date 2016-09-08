@@ -1,0 +1,15 @@
+def main():
+	
+		f= int(input("Please enter Fahrenheit value"))
+	
+		print ("Fahrenheit", "Celsius")
+		
+		value= ((f-32)/(9/5))
+		a= value
+	
+		for b in range (1, 11):
+			print (f,a)
+			f= f+5 
+			a= (f-32)/(9/5)
+			
+main()
