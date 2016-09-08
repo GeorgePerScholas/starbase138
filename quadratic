@@ -6,6 +6,7 @@ def main():
 	x= int(input("Please enter value"))
 
 	value=(a*(x*x)+(b*x)+c)
+	print ("(",(a),"*",(x),"^2",")","+","(",b,"*",x,")","+",c,)
 	print (value)
 
 
