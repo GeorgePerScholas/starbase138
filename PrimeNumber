@@ -1,0 +1,15 @@
+list=[]
+
+for x in range (1,100):
+    isPrime=True
+    for y in range (2,x):
+        if x%y==0:
+            isPrime=False
+            break
+
+    if isPrime:
+        list.append(x)
+
+    print("Prime numbers are", list)
+    
+    #late and some of the clunkiest code I've written so far. 
