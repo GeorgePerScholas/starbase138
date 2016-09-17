@@ -1,0 +1,63 @@
+#WORD COUNTER PROGRAM
+def main():
+    textfile = []
+    fileinput=getfile()
+    readfile(fileinput)
+
+
+def getfile():
+    counter=0
+
+
+    while counter<3:
+        try:
+            pathfile=input("Please enter the complete file name")
+            file=open(pathfile,"r")
+            return file
+            #print(file.read())
+
+
+        except FileNotFoundError:
+            print("File not found.")
+            counter=(counter +1)
+
+
+
+def readfile(textfile):  #SORT WORDS
+    a=0
+    endsent=0
+    report=textfile.read()
+    count=len(report)
+    for a in range (0,count):
+        if report[a]=='.'or report[a]==','or report[a]==':'or report[a]==';'or report[a]=='!'or report[a]=='?':
+            endsent +=1
+    words=report.split()
+    print(words)
+    validwords=0
+    testword=0
+    b=0
+    size = 0
+    validnumber=False
+
+    while validnumber==False:
+        try:
+            wordsize = int(input("Please enter the number of letters you want a word to have"))
+            validnumber=True
+
+        except:
+            print("Please enter a proper numerical value.")
+            validnumber=False
+
+    for a in words:
+        testword=words[b]
+        testword=len(testword)
+        if testword >=wordsize:
+            validwords +=1
+        b+=1
+
+    numberwords=len(words)
+    print("The number of words in your document is", len(words), "The total number of valid words is", validwords)
+    print("The", endsent)
+    print( "Average", validwords/endsent)
+
+main()
